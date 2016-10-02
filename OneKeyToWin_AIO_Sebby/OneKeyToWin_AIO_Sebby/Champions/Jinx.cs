@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using LeagueSharp;
@@ -305,7 +305,7 @@ namespace OneKeyToWin_AIO_Sebby
 
                     if (Rdmg > predictedHealth && !OktwCommon.IsSpellHeroCollision(target, R) && GetRealDistance(target) > bonusRange() + 200)
                     {
-                        if ( GetRealDistance(target) > target.CountAlliesInRange(500) == 0 && Player.CountEnemiesInRange(400) == 0)
+                        if ( GetRealDistance(target) > bonusRange() + 300 + target.BoundingRadius && target.CountAlliesInRange(500) == 0 && Player.CountEnemiesInRange(400) == 0)
                         {
                             castR(target);
                         }
