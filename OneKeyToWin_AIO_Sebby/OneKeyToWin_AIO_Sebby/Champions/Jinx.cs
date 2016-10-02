@@ -193,7 +193,7 @@ namespace OneKeyToWin_AIO_Sebby
             var t = TargetSelector.GetTarget(bonusRange() + 60, TargetSelector.DamageType.Physical);
             if (t.IsValidTarget())
             {
-                if (!FishBoneActive && (!SebbyLib.Orbwalking.InAutoAttackRange(t) || t.CountEnemiesInRange(250) >= 2) && Orbwalker.GetTarget() == null)
+                if (!FishBoneActive && (!SebbyLib.Orbwalking.InAutoAttackRange(t) || t.CountEnemiesInRange(200) >= 2) && Orbwalker.GetTarget() == null)
                 {
                     var distance = GetRealDistance(t);
                     if (Program.Combo && (Player.Mana > 10 || Player.GetAutoAttackDamage(t) * 3 > t.Health))
@@ -305,7 +305,7 @@ namespace OneKeyToWin_AIO_Sebby
 
                     if (Rdmg > predictedHealth && !OktwCommon.IsSpellHeroCollision(target, R) && GetRealDistance(target) > bonusRange() + 200)
                     {
-                        if ( GetRealDistance(target) > bonusRange() + 300 + target.BoundingRadius && target.CountAlliesInRange(500) == 0 && Player.CountEnemiesInRange(400) == 0)
+                        if ( GetRealDistance(target) > target.CountAlliesInRange(500) == 0 && Player.CountEnemiesInRange(400) == 0)
                         {
                             castR(target);
                         }
