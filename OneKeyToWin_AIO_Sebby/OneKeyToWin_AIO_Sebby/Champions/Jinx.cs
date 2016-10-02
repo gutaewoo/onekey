@@ -193,7 +193,7 @@ namespace OneKeyToWin_AIO_Sebby
             var t = TargetSelector.GetTarget(bonusRange() + 60, TargetSelector.DamageType.Physical);
             if (t.IsValidTarget())
             {
-                if (!FishBoneActive && (!SebbyLib.Orbwalking.InAutoAttackRange(t) || t.CountEnemiesInRange(250) > 2) && Orbwalker.GetTarget() == null)
+                if (!FishBoneActive && (!SebbyLib.Orbwalking.InAutoAttackRange(t) || t.CountEnemiesInRange(250) >= 2) && Orbwalker.GetTarget() == null)
                 {
                     var distance = GetRealDistance(t);
                     if (Program.Combo && (Player.Mana > 10 || Player.GetAutoAttackDamage(t) * 3 > t.Health))
