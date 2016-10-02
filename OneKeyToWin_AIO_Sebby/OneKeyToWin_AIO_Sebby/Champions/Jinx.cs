@@ -204,7 +204,7 @@ namespace OneKeyToWin_AIO_Sebby
             }
             else if (!FishBoneActive && Program.Combo && Player.Mana > 20)
                 Q.Cast();
-            else if (FishBoneActive && Program.Combo && Player.Mana < 20)
+            else if (FishBoneActive && Program.Combo && Player.Mana < 10)
                 Q.Cast();
             else if (FishBoneActive && Program.Combo)
                 ;
